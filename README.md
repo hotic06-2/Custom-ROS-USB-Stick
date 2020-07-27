@@ -158,7 +158,7 @@ apt install python-pip
 export LC_ALL=$LC_NAME
 
 pip install requests flask
-apt-get install ros-kinetic-turtlebot3 ros-kinetic-turtlebot3-msgs ros-kinetic-turtlebot3-simulations ros-kinetic-aruco-ros
+apt-get install ros-kinetic-turtlebot3 ros-kinetic-turtlebot3-msgs ros-kinetic-turtlebot3-simulations ros-kinetic-aruco-ros git
 
 #必要になりそうなパッケージを一通りインストール
 apt-get install ros-kinetic-joy ros-kinetic-teleop-twist-joy ros-kinetic-teleop-twist-keyboard ros-kinetic-laser-proc ros-kinetic-rgbd-launch ros-kinetic-depthimage-to-laserscan  ros-kinetic-rosserial-arduino ros-kinetic-rosserial-python ros-kinetic-rosserial-server ros-kinetic-rosserial-client ros-kinetic-rosserial-msgs ros-kinetic-amcl ros-kinetic-map-server ros-kinetic-move-base ros-kinetic-urdf ros-kinetic-xacro ros-kinetic-compressed-image-transport ros-kinetic-rqt-image-view ros-kinetic-gmapping ros-kinetic-navigation ros-kinetic-interactive-markers ros-kinetic-slam-gmapping ros-kinetic-libg2o libopencv-dev ros-kinetic-costmap-converter libsuitesparse-dev libarmadillo-dev libarmadillo6 graphviz graphviz-dev ros-kinetic-jsk-rviz-plugins ros-kinetic-smach* gnome-terminal
@@ -220,6 +220,9 @@ Legacyモードに設定し、Secure Bootを無効にすると起動する場合
 
 まず端末の起動方法ですが、左下のメニューのシステムツール→LxTerminalで、端末が起動します。
 
+ROS開発環境はインターネットに接続している必要があります。
+右下のタスクバーのネットワークアイコンから、WiFiの設定が可能です。
+
 まず、環境設定をしましょう。
 ```
 sudo rosdep init
@@ -239,6 +242,12 @@ echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 ```
 
+
 その後は、
 https://github.com/OneNightROBOCON/burger_war
 を参考にしてください。
+
+[2. このリポジトリをクローン](https://github.com/OneNightROBOCON/burger_war/blob/master/README.md#2-%E3%81%93%E3%81%AE%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%82%92%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%B3)
+から実行してください。
+ただし、gitと依存ライブラリは既に入っています。3. 依存ライブラリのインストールはスキップできます。
+
